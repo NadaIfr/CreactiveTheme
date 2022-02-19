@@ -1,0 +1,363 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 2000px;
+}
+/* .clr{
+    clear: both;
+}  */
+.container{
+    width: 80%;
+    margin: auto;
+}
+ /* طريقة اخرى لتغيير لون الخلفية للاغمق
+.overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+} */
+/*start of nav and header part*/
+nav{
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding:20px 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 999; /*لانه في الهيدر ماخد فوزشن ابسليوت واجا فوقه بعمل هيك حتى الناف يجي فوق*/}
+
+nav a{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin:0px 12px;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+nav .logo{
+float: left;
+width: 35%;
+}
+nav .logo a{
+    font-size: 22px;
+    font-weight: bold;
+}
+nav a:hover{
+    transition: 100ms;
+    color: white;
+}
+nav .navbar{
+    float: left;
+    width: 65%;
+    text-align: right; /*تحريك النصوص الي جوا لليمين*/
+}
+nav .navbar li{
+    display: inline-block;
+    list-style: none;
+    text-transform: capitalize;
+}
+nav .navbar li a{
+    font-size: 15px !important;
+    font-weight: bold;
+}
+header{
+background-image: url(../images/bg-masthead.jpg);   
+height: 100vh;
+background-size: cover;
+background-position: 0px -100px;
+position: relative;
+}
+/*مشان اغطي الهيدر بطبقة شفافة بدل overlay*/
+header::after{
+    content: "";
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%);  
+    /*لسا ما اخذنا الحاصية يلي فوق */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.header-content{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+header h1{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 1.3;
+}
+header span{
+    background-color: #f4623a;
+    height: 3px;
+    width: 60px;
+    display: block;
+    margin: 20px auto;
+}
+header p{
+    color:rgba(255, 255, 255, 0.75);
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+header a{
+color: white;
+background-color: #f4623a;
+padding: 20px 36px;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+border-radius: 40px;
+font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header a:hover{
+    cursor: pointer;
+    opacity: .9;  
+}
+/*end of nav and header part*/
+
+/*start of started part*/
+.started{
+    background-color: #f4623a;
+    padding: 120px 0px; /*بنحاول ما نستخدم الارتفاع*/
+    text-align: center;
+}
+.started h2{
+    color: white;
+    font-size: 30px;
+}
+.started span {
+    background-color: white;
+    display: block;
+    height: 3px;
+    width: 60px;
+    margin: 20px auto;
+}
+.started p{
+    color: #ffbf;
+    font-size: 19px;
+    width: 50%;
+    margin: auto; /*بدي اجيب البديف بحاله بالنص*/
+    margin-bottom: 40px;
+}
+.started a{
+    color: white;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    padding: 20px 36px;
+    border-radius: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+/*end of started part */
+/*start of services part*/
+.services{
+    padding: 120px 0px; /*بنحاول ما نستخدم الارتفاع*/
+    text-align: center;
+}
+.services h2{
+    text-transform: capitalize;
+    font-size: 30px;
+    color:#212529;
+}
+.services span{
+    background-color: #f4623a;
+    height: 3px;
+    width: 60px;
+    display: block;
+    margin: 20px auto;
+}
+.services .icons{
+    margin-top: 60px;
+    overflow: hidden;    
+    text-align: center;
+}
+
+.services .icon{
+    float: left;
+    width: 25%;
+} 
+.services .icon i{
+    color: #f4623a;
+    font-size: 38px;  
+}
+.services h3{
+    line-height: 55px;
+    font-size: 25px;
+    text-transform: capitalize;
+    color:#212529;    
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+}
+.services p{
+    font-size: 19px;
+    color: #6c757d;
+    width: 80%;
+    margin: auto;
+}
+/*end of services part*/
+/*start of projects part*/
+.projects{
+    background-color: rgb(87, 85, 85);   
+    overflow: hidden;
+}
+.projects .item{
+    float: left;
+    width: 33.33%;      
+    position: relative ;
+}
+.projects img{
+    width:100% ;
+    display: block; /*حتى احل مشكلة الفراغات بين الصور*/    
+} 
+.overlay-project{
+    background-color: #f4623a;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+}
+.overlay-project .overlay-content{ /*مشان اجيب المحتوى بالنص بشكل طولي*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 30px;
+} 
+.overlay-content p{
+    color:#6c757d;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+}
+.overlay-content h4{
+    color:white;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.projects .overlay-project:hover{
+    opacity: .9;
+    cursor: pointer;
+    transition: 700ms;
+}
+ 
+/*end of projects part*/
+/*start of download part*/
+.download{
+    background-color: #212529;
+    text-align: center;
+    padding: 120px 0px; /*بنحاول ما نستخدم الارتفاع*/
+    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.download p{
+    color: white;
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.download a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 20px 36px;
+    background-color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+}
+/*end of download part*/
+/*start of form part*/
+.forms{
+    text-align: center;
+    padding-top: 120px ; 
+}
+.forms h2{
+    text-transform: capitalize;
+    font-size:30px ;
+}
+.forms .firstP{
+    width: 33%;
+    margin: auto; 
+    font-size: 18px;
+    color: #6c757d;
+}
+.forms span {
+    background-color: #f4623a;
+    height: 3px;
+    width: 60px;
+    display: block;
+    margin: 20px auto;
+}
+ .form{
+    width: 33%;
+    margin: 20px auto;
+} 
+.form input{
+    display: block;
+    margin-top: 20px ;
+    width: 100%;
+    height: 50px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding-left: 15px;
+    border: 1px solid #6c757d;
+}
+
+.form textarea{
+    width: 100%;
+    height: 150px;
+    margin-top: 30px;
+    font-size: 18px;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #6c757d;
+    border-radius: 6px;
+}
+.form a{
+    background-color: #f4623a;
+    color: white;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-radius: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.form a:hover{
+    cursor: pointer;
+    opacity: .9;  
+}
+/* .form a:hover{
+
+} */
+.form .tel{
+    padding: 50px 0px 160px 0px;
+}
+.form .tel i{
+    margin-bottom: 10px;
+    color: #6c757d;
+    font-size: 35px;
+
+}
+.tel p{
+color: #212529;
+font-size: 17px;
+}
+/*end of form part*/
+/*start of footer*/
+footer{
+    text-align: center;
+    text-transform: capitalize;
+    color: #6c757d;
+    font-size: 17px;
+    padding: 40px 0px;
+    background-color: #F8F9FA;
+}
+/*end of footer*/
